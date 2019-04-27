@@ -1,5 +1,5 @@
 import random
-#Class
+#Class that pretty much just saves the name of the player that we get from the input in titleScreen(). I don't really have too much of a plan to actually use the class for anything in the actual game.
 """explaination of class"""
 
 def titleScreen():
