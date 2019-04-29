@@ -1,7 +1,19 @@
 import random
 #Class that pretty much just saves the name of the player that we get from the input in titleScreen(). I don't really have too much of a plan to actually use the class for anything in the actual game.
-"""explaination of class"""
-
+class Player
+	#Constructor method for the class
+	#Declares default name as John Doe
+	def __init__(self, name: str = 'John Doe'):
+		self.__name = name
+	#Mutator method for class
+	def setName (self, name:str):
+		self.__name = name
+	#Accessor method for class
+	def getName(self):
+		return self.__name
+	#Method to print information
+	def __str__(self):
+		return "Player's name is {}.format(self.__name)
 def titleScreen():
 # print() statement 2 points
 	print("Welcome to Our Game!")
