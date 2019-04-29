@@ -13,7 +13,7 @@ class Player:
 		return self.__name
 	#Method to print information
 	def __str__(self):
-		return "Player's name is {}.format(self.__name)
+		return "Player's name is {}.format(self.__name)"
 def titleScreen():
 # print() statement 2 points
 	print("Welcome to Our Game!")
