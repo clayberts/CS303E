@@ -1,6 +1,6 @@
 import random
 #Class that pretty much just saves the name of the player that we get from the input in titleScreen(). I don't really have too much of a plan to actually use the class for anything in the actual game.
-class Player
+class Player:
 	#Constructor method for the class
 	#Declares default name as John Doe
 	def __init__(self, name: str = 'John Doe'):
