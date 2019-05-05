@@ -31,7 +31,7 @@ def gameplayLevelOne():
 	# If statement 5 points
 
 	player = titleScreen()
-	playerClass = Player(player) #The Player Class is used within the gameplayLevelOne function here and in the following print statement
+	playerClass = Player(player) #The Player Class is used within the gameplayLevelOne function here and in the following print statement 2 lines down as playerClass.getName()
 	skip = '\n'
 	print(f"{playerClass.getName()}, you wake up in an empty room {skip}aside from an ajar door on the far wall {skip}and a desk with a note ontop of it.")
 	choice1 = input("Enter 'note' to read the note; Enter 'door' to cross through the doorway: ")
