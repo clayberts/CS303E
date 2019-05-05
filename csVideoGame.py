@@ -27,16 +27,17 @@ def tutorialNote():
 	with open("tutorial.txt", "r") as inFile:
 
 def gameplayLevelOne():
-# Formatting for strings 5 points ??
-# If statement 5 points
+	# Formatting for strings 5 points ??
+	# If statement 5 points
 
 	player = titleScreen()
+	playerClass = Player(player) #The Player Class is used within the gameplayLevelOne function here and in the following print statement
 	skip = '\n'
-	print(f"{player}, you wake up in an empty room {skip}aside from an ajar door on the far wall {skip}and a desk with a note ontop of it.")
+	print(f"{playerClass.getName()}, you wake up in an empty room {skip}aside from an ajar door on the far wall {skip}and a desk with a note ontop of it.")
 	choice1 = input("Enter 'note' to read the note; Enter 'door' to cross through the doorway: ")
 	if choice1.lower() == "door":
 		print("You cross the room and pass through the frame of the door. Your journey begins...")
-	elif choice1.lower() == "note"
+	elif choice1.lower() == "note":
 		print("You pick the note up and examine it. The note looks to be covered in instructions")
 #		tutorialNote()
 		choice2 = input("Enter 'door' to cross through the doorway: ")
