@@ -69,7 +69,7 @@ def main():
 #This function is where we will execute our entire game code.
 	gameplayLevelOne()
 	print('\n' + "You enter a room that has a dice laying on a table. You approach the dice, compelled to roll it.")
-	continuePlay = input("Roll the Dice? One you begin you will be unable to stop until a final outcome has been reached: ")
+	continuePlay = input("Roll the Dice? Once you begin you will be unable to stop until a final outcome has been reached: ")
 	dictionaryForRolls = {'Tie':'You are stuck! Losing health fast!','Win':'You are safe!','Lose':'Stuck for too long\nHealth level: 0%...Mission incomplete'}
 	diceOne,diceTwo = rollingDice()
 	print(comparingRolls(diceOne,diceTwo,dictionaryForRolls,health=100))
