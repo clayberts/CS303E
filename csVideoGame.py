@@ -24,7 +24,8 @@ def tutorialNote():
 # This function reads a text file that has the instructions for the game on it.
 # 2 Style of Comments (single and multiline) 
 # File Reading 15 points
-	with open("tutorial.txt", "r") as inFile:
+	with open("tutorial.txt") as inFile:
+		return inFile.read()
 
 def gameplayLevelOne():
 	# Formatting for strings 5 points ??
@@ -39,7 +40,7 @@ def gameplayLevelOne():
 		print("You cross the room and pass through the frame of the door. Your journey begins...")
 	elif choice1.lower() == "note":
 		print("You pick the note up and examine it. The note looks to be covered in instructions")
-#		tutorialNote()
+		print('\n'  + tutorialNote())
 		choice2 = input("Enter 'door' to cross through the doorway: ")
 		if choice2.lower == "door":
 			print("You cross the room and pass through the frame of the door. Your journey begins...")
@@ -66,12 +67,15 @@ def comparingRolls(diceOne,diceTwo,dictionaryForRolls,health=100):
 
 def main():
 #This function is where we will execute our entire game code.
-	
+	gameplayLevelOne()
+	print('\n' + "You enter a room that has a dice laying on a table. You approach the dice, compelled to roll it.")
+	continuePlay = input("Roll the Dice? One you begin you will be unable to stop until a final outcome has been reached: ")
+	dictionaryForRolls = {'Tie':'You are stuck! Losing health fast!','Win':'You are safe!','Lose':'Stuck for too long\nHealth level: 0%...Mission incomplete'}
+	diceOne,diceTwo = rollingDice()
+	print(comparingRolls(diceOne,diceTwo,dictionaryForRolls,health=100))
+
     #line 59 below uses a dictionary. It is used as a parameter in the comparingRolls recursive function.
     #lines 59-61 will be right next to each other in the finished game code as shown below. However right now these three lines in main() are just testing to see if the recursive function,dictionary, and print statement work together.
-    dictionaryForRolls = {'Tie':'You are stuck! Losing health fast!','Win':'You are safe! Continue forward','Lose':'Stuck for too long\nHealth level: 0%...Mission incomplete'}
-    diceOne,diceTwo = rollingDice()
-    print(comparingRolls(diceOne,diceTwo,dictionaryForRolls,health=100))
 
 	
 main()
